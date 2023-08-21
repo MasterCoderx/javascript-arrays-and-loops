@@ -31,16 +31,16 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 // Exercise 3
 
 function isPalindrome (string) {
-    let reversedString = getReversedString(string);
+    let reversedString = getReversedString(string).replaceAll(' ', '');
     let lowerCaseReversedString = reversedString.toLowerCase();
-    let lowerCaseString = string.toLowerCase();
+    let lowerCaseString = string.toLowerCase().replaceAll(' ','');
     function getReversedString(string) {
         let reversedWordsArray = [];
         let letter = string.split('');
         for (let i = 0; i < string.length; ++i) {
             reversedWordsArray.unshift(letter[i]);
         }
-        return reversedWordsArray.join("");
+        return (reversedWordsArray.join(""));
     }
     return (lowerCaseString === lowerCaseReversedString);
 }
