@@ -50,3 +50,44 @@ console.log(isPalindrome('Racecar')); // true
 console.log(isPalindrome('Was it a cat I saw')) // true
 console.log(isPalindrome('Hello!')); // false
 
+// Exercise 4
+const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
+
+function countLetters(analysedString) {
+    const stringWithNoSpaces = analysedString.replaceAll(' ', '');
+    const stringToLowerCase = stringWithNoSpaces.toLowerCase();
+    const stringToArray = stringToLowerCase.split('');
+    let alphabet = {
+        a: 0,
+        b: 0,
+        c: 0,
+        d: 0,
+        e: 0,
+        f: 0,
+        g: 0,
+        h: 0,
+        i: 0,
+        j: 0,
+        k: 0,
+        l: 0,
+        m: 0,
+        n: 0,
+        o: 0,
+        p: 0,
+        q: 0,
+        r: 0,
+        s: 0,
+        t: 0,
+        u: 0,
+        w: 0,
+        x: 0,
+        y: 0,
+        z: 0,
+    };
+    for (let i = 0; i < stringToArray.length; ++i) {
+        let letter = stringToArray[i];
+        alphabet[letter] = (alphabet[letter] || 0) +1;
+    }
+    return alphabet
+}
+console.log(lettersObject);
