@@ -121,7 +121,7 @@ function getOldestPerson(peopleArray) {
     const peopleSortedByAge = peopleArray.sort(
     function(firstPerson, secondPerson) {
         return firstPerson.age - secondPerson.age;
-        });
+    });
     return peopleSortedByAge[peopleSortedByAge.length - 1];
 }
 function getAgeDifference(peopleArray) {
@@ -147,3 +147,19 @@ function getSumOfPositivePoints(analysedPointsArray) {
     return sumOfPositivePoints;
 }
 console.log(getSumOfPositivePoints(pointsArray));
+
+// Exercise 7
+const numbersToSquare = [1, 2, 2];
+function getSquareSum(numbersArray) {
+    let squaredNumbers = [];
+    for (i = 0; i < numbersArray.length; ++i) {
+        squaredNumbers.push(Math.pow(numbersArray[i], 2));
+    }
+    let total = 0;
+    for (i = 0; i < squaredNumbers.length; ++i) {
+        total += squaredNumbers[i];
+    }
+    return total;
+}
+
+console.log(getSquareSum(numbersToSquare));
