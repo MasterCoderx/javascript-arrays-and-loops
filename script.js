@@ -22,7 +22,7 @@ function getReversedString(word) {
     for (let i=0; i < word.length; ++i ) {
         reversedWordsArray.unshift(letter[i]);
     }
-    return reversedWordsArray.join("");
+    return reversedWordsArray.join('');
 }
 
 console.log(getReversedString('Hello!')); // '!olleH'
@@ -134,7 +134,16 @@ console.log(getAgeDifference(peopleArray)); // 70
 const pointsArray = [1,-4,7,12]
 
 function getSumOfPositivePoints(analysedPointsArray) {
+    let positiveNumbers = [];
     for (i = 0; i < analysedPointsArray.length; ++i) {
-
+        if (analysedPointsArray[i] >= 0) {
+           positiveNumbers.push(analysedPointsArray[i]);
+        }
     }
+    let sumOfPositivePoints = 0
+    for (i = 0; i < positiveNumbers.length; ++i) {
+        sumOfPositivePoints += positiveNumbers[i];
+    }
+    return sumOfPositivePoints;
 }
+console.log(getSumOfPositivePoints(pointsArray));
