@@ -31,16 +31,16 @@ console.log(getReversedString('Arrays')); // 'syarrA'
 // Exercise 3
 
 function isPalindrome (string) {
-    let reversedString = getReversedString(string).replaceAll(' ', '');
-    let lowerCaseReversedString = reversedString.toLowerCase();
-    let lowerCaseString = string.toLowerCase().replaceAll(' ','');
+    const reversedString = getReversedString(string).replaceAll(' ', '');
+    const lowerCaseReversedString = reversedString.toLowerCase();
+    const lowerCaseString = string.toLowerCase().replaceAll(' ','');
     function getReversedString(string) {
         let reversedWordsArray = [];
-        let letter = string.split('');
+        const letter = string.split('');
         for (let i = 0; i < string.length; ++i) {
             reversedWordsArray.unshift(letter[i]);
         }
-        return (reversedWordsArray.join(""));
+        return (reversedWordsArray.join(''));
     }
     return (lowerCaseString === lowerCaseReversedString);
 }
@@ -91,3 +91,40 @@ function countLetters(analysedString) {
     return alphabet
 }
 console.log(lettersObject);
+
+// Exercise 5
+
+const peopleArray = [
+    {
+        name: 'Adam',
+        age: 20 },
+    {
+        name: 'Amanda',
+        age: 5 },
+    {
+        name: 'John',
+        age: 75 },
+    {
+        name: 'Dave',
+        age: 15
+    }
+];
+
+function getYoungestPerson(peopleArray) {
+    const peopleSortedByAge = peopleArray.sort(
+    function(firstPerson, secondPerson) {
+        return firstPerson.age - secondPerson.age
+    });
+    return peopleSortedByAge[0];
+}
+function getOldestPerson(peopleArray) {
+    const peopleSortedByAge = peopleArray.sort(
+    function(firstPerson, secondPerson) {
+        return firstPerson.age - secondPerson.age;
+        });
+    return peopleSortedByAge[peopleSortedByAge.length - 1];
+}
+function getAgeDifference(peopleArray) {
+    return getOldestPerson(peopleArray).age - getYoungestPerson(peopleArray).age;
+}
+console.log(getAgeDifference(peopleArray)); // 70
