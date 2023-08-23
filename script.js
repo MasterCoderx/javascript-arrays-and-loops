@@ -40,9 +40,9 @@ function isPalindrome (string) {
         for (let i = 0; i < string.length; ++i) {
             reversedWordsArray.unshift(letter[i]);
         }
-        return (reversedWordsArray.join(''));
+        return reversedWordsArray.join('');
     }
-    return (lowerCaseString === lowerCaseReversedString);
+    return lowerCaseString === lowerCaseReversedString;
 }
 
 console.log(isPalindrome('Kayak')); // true
@@ -128,3 +128,13 @@ function getAgeDifference(peopleArray) {
     return getOldestPerson(peopleArray).age - getYoungestPerson(peopleArray).age;
 }
 console.log(getAgeDifference(peopleArray)); // 70
+
+// Exercise 6
+
+const pointsArray = [1,-4,7,12]
+
+function getSumOfPositivePoints(analysedPointsArray) {
+    for (i = 0; i < analysedPointsArray.length; ++i) {
+
+    }
+}
