@@ -140,3 +140,11 @@ function getSquareSum(numbersArray) {
     return total;
 }
 console.log(getSquareSum(numbersToSquare));
+
+// Exercise 8 - Write a function to convert full name to initials (Case insensitive)
+
+function getFullNameInitials(fullName) {
+    const splitFullName = fullName.split(' ');
+    return `${splitFullName[0].charAt(0)}.${splitFullName[1].charAt(0)}`;
+}
+console.log(getFullNameInitials('John Smith'));
