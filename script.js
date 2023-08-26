@@ -1,7 +1,7 @@
 // Exercise 1
 
 function getSquaredNumbers(numbers) {
-    let array = [];
+    const array = [];
     for (let i = 0; i < numbers.length; ++i) {
        array.push(Math.pow(numbers[i], 2));
     }
@@ -17,10 +17,10 @@ console.log(numbers); // [1, 2, 3]
 // Exercise 2
 
 function getReversedString(word) {
-    let reversedWordsArray = [];
-    let letter = word.split('');
+    const reversedWordsArray = [];
+    const letters = word.split('');
     for (let i=0; i < word.length; ++i ) {
-        reversedWordsArray.unshift(letter[i]);
+        reversedWordsArray.unshift(letters[i]);
     }
     return reversedWordsArray.join('');
 }
@@ -34,14 +34,7 @@ function isPalindrome (string) {
     const reversedString = getReversedString(string).replaceAll(' ', '');
     const lowerCaseReversedString = reversedString.toLowerCase();
     const lowerCaseString = string.toLowerCase().replaceAll(' ','');
-    function getReversedString(string) {
-        let reversedWordsArray = [];
-        const letter = string.split('');
-        for (let i = 0; i < string.length; ++i) {
-            reversedWordsArray.unshift(letter[i]);
-        }
-        return reversedWordsArray.join('');
-    }
+
     return lowerCaseString === lowerCaseReversedString;
 }
 
@@ -52,43 +45,23 @@ console.log(isPalindrome('Hello!')); // false
 
 // Exercise 4
 const lettersObject = countLetters('The quick brown fox jumps over the lazy dog');
+console.log(countLetters('Hi and welcome to my house'));
+function getParsedText(text) {
+    const stringWithNoSpaces = text.replaceAll(' ', '');
+    const stringToLowerCase = stringWithNoSpaces.toLowerCase();
+    return stringToLowerCase.split('');
+}
+
+getParsedText('Wonderful'); // ['w', 'o', 'n', 'd', 'e', 'r', 'f', 'u', 'l']
 
 function countLetters(analysedString) {
-    const stringWithNoSpaces = analysedString.replaceAll(' ', '');
-    const stringToLowerCase = stringWithNoSpaces.toLowerCase();
-    const stringToArray = stringToLowerCase.split('');
-    let alphabet = {
-        a: 0,
-        b: 0,
-        c: 0,
-        d: 0,
-        e: 0,
-        f: 0,
-        g: 0,
-        h: 0,
-        i: 0,
-        j: 0,
-        k: 0,
-        l: 0,
-        m: 0,
-        n: 0,
-        o: 0,
-        p: 0,
-        q: 0,
-        r: 0,
-        s: 0,
-        t: 0,
-        u: 0,
-        w: 0,
-        x: 0,
-        y: 0,
-        z: 0,
-    };
-    for (let i = 0; i < stringToArray.length; ++i) {
-        let letter = stringToArray[i];
+    const letters = getParsedText(analysedString);
+    const alphabet = {};
+    for (let i = 0; i < letters.length; ++i) {
+        const letter = letters[i];
         alphabet[letter] = (alphabet[letter] || 0) +1;
     }
-    return alphabet
+    return alphabet;
 }
 console.log(lettersObject);
 
@@ -97,13 +70,16 @@ console.log(lettersObject);
 const peopleArray = [
     {
         name: 'Adam',
-        age: 20 },
+        age: 20
+    },
     {
         name: 'Amanda',
-        age: 5 },
+        age: 5
+    },
     {
         name: 'John',
-        age: 75 },
+        age: 75
+    },
     {
         name: 'Dave',
         age: 15
@@ -112,16 +88,18 @@ const peopleArray = [
 
 function getYoungestPerson(peopleArray) {
     const peopleSortedByAge = peopleArray.sort(
-    function(firstPerson, secondPerson) {
-        return firstPerson.age - secondPerson.age
-    });
+        function(firstPerson, secondPerson) {
+            return firstPerson.age - secondPerson.age;
+        }
+    );
     return peopleSortedByAge[0];
 }
 function getOldestPerson(peopleArray) {
     const peopleSortedByAge = peopleArray.sort(
-    function(firstPerson, secondPerson) {
-        return firstPerson.age - secondPerson.age;
-    });
+        function(firstPerson, secondPerson) {
+            return firstPerson.age - secondPerson.age;
+        }
+    );
     return peopleSortedByAge[peopleSortedByAge.length - 1];
 }
 function getAgeDifference(peopleArray) {
@@ -135,13 +113,13 @@ const pointsArray = [1,-4,7,12]
 
 function getSumOfPositivePoints(analysedPointsArray) {
     let positiveNumbers = [];
-    for (i = 0; i < analysedPointsArray.length; ++i) {
+    for (let i = 0; i < analysedPointsArray.length; ++i) {
         if (analysedPointsArray[i] >= 0) {
            positiveNumbers.push(analysedPointsArray[i]);
         }
     }
     let sumOfPositivePoints = 0
-    for (i = 0; i < positiveNumbers.length; ++i) {
+    for (let i = 0; i < positiveNumbers.length; ++i) {
         sumOfPositivePoints += positiveNumbers[i];
     }
     return sumOfPositivePoints;
@@ -152,14 +130,13 @@ console.log(getSumOfPositivePoints(pointsArray));
 const numbersToSquare = [1, 2, 2];
 function getSquareSum(numbersArray) {
     let squaredNumbers = [];
-    for (i = 0; i < numbersArray.length; ++i) {
+    for (let i = 0; i < numbersArray.length; ++i) {
         squaredNumbers.push(Math.pow(numbersArray[i], 2));
     }
     let total = 0;
-    for (i = 0; i < squaredNumbers.length; ++i) {
-        total += squaredNumbers[i];
+    for (let i = 0; i < squaredNumbers.length; ++i) {
+        total = total + squaredNumbers[i];
     }
     return total;
 }
-
 console.log(getSquareSum(numbersToSquare));
