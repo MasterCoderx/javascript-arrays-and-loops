@@ -148,3 +148,26 @@ function getFullNameInitials(fullName) {
     return `${splitFullName[0].charAt(0)}.${splitFullName[1].charAt(0)}`;
 }
 console.log(getFullNameInitials('John Smith'));
+
+// Exercise 9
+
+const listOfSheep = [
+    true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  null, false, true ,
+    true,  true,  true,  true ,
+    false, undefined, true,  true
+];
+
+function countNumberOfSheep(countList) {
+    let numberOfSheep = 0;
+    for (let i = 0; i < listOfSheep.length; ++i) {
+        if (listOfSheep[i] === true) {
+            numberOfSheep = numberOfSheep + 1;
+        }
+    }
+    return numberOfSheep
+}
+
+console.log(countNumberOfSheep(listOfSheep));
