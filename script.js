@@ -152,22 +152,37 @@ console.log(getFullNameInitials('John Smith'));
 // Exercise 9
 
 const listOfSheep = [
-    true,  true,  true,  false,
-    true,  true,  true,  true ,
-    true,  false, true,  false,
-    true,  null, false, true ,
-    true,  true,  true,  true ,
-    false, undefined, true,  true
+    true, true, true, false,
+    true, true, true, true ,
+    true, false, true, false,
+    true, null, false, true ,
+    true, true, true, true ,
+    false, undefined, true, true
 ];
 
 function countNumberOfSheep(countList) {
     let numberOfSheep = 0;
-    for (let i = 0; i < listOfSheep.length; ++i) {
-        if (listOfSheep[i] === true) {
+    for (let i = 0; i < countList.length; ++i) {
+        if (countList[i] === true) {
             numberOfSheep = numberOfSheep + 1;
         }
     }
-    return numberOfSheep
+    return numberOfSheep;
 }
 
 console.log(countNumberOfSheep(listOfSheep));
+
+// Exercise 10
+
+const randomNumbers = 1762354;
+
+function getReversedOrder(numbers) {
+    const numbersArray = numbers.split();
+    const reversedNumbersArray = [];
+    for (let i = 0; i < numbersArray.length; ++i) {
+        reversedNumbersArray.push(numbers[i]);
+    }
+    return reversedNumbersArray;
+}
+
+console.log(getReversedOrder(randomNumbers));
