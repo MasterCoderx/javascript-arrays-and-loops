@@ -174,15 +174,15 @@ console.log(countNumberOfSheep(listOfSheep));
 
 // Exercise 10
 
-const randomNumbers = 1762354;
+const randomNumbers = 35231;
 
 function getReversedOrder(numbers) {
-    const numbersArray = numbers.split();
+    const numbersToString = `${numbers}`;
+    const numbersArray = numbersToString.split('');
     const reversedNumbersArray = [];
     for (let i = 0; i < numbersArray.length; ++i) {
-        reversedNumbersArray.push(numbers[i]);
+        reversedNumbersArray.unshift(numbersArray[i]);
     }
     return reversedNumbersArray;
 }
-
 console.log(getReversedOrder(randomNumbers));
