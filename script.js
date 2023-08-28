@@ -279,3 +279,15 @@ function getGradesAverage(grades) {
 }
 
 console.log(getGradesAverage(gradesArray));
+
+// Exercise 18
+
+const numberOfMonkeys = [8];
+function countMonkeys(numberToPopulate) {
+    let countingMonkeys = [];
+    for (let i = 0; i < numberToPopulate; ++i) {
+        countingMonkeys.push([i+1]);
+    }
+    return countingMonkeys;
+}
+console.log(countMonkeys(numberOfMonkeys));
