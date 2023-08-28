@@ -210,3 +210,15 @@ function getDoubleNumbers(numbersToDouble) {
     return doubledNumbers;
 }
 console.log(getDoubleNumbers(arrayOfNumbers));
+
+// Exercise 13
+
+const arrayOfNumbersToInvert = [1, -4, 6, -8];
+function getInverseNumbers(numbersToInvert) {
+    const invertedNumbers = [];
+    for (let i = 0; i < numbersToInvert.length; ++i) {
+        invertedNumbers.push(-numbersToInvert[i]);
+    }
+    return invertedNumbers;
+}
+console.log(getInverseNumbers(arrayOfNumbersToInvert));
