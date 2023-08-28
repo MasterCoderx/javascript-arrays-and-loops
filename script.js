@@ -234,3 +234,22 @@ function getSumOfNumbersInArray (numbersToAdd) {
     return sumOfNumbers;
 }
 console.log(getSumOfNumbersInArray(arrayOfNumbersToAdd));
+
+// Exercise 15
+
+const firstArrayOfNumbersToAdd = [1, 2, 3, 4];
+const secondArrayOfNumbersToAdd = [2.5, 2.5];
+
+function getArraySum(numbersToAdd) {
+    let sumOfNumbers = 0;
+    for (let i = 0; i < numbersToAdd.length; ++i) {
+        sumOfNumbers = sumOfNumbers + numbersToAdd[i];
+    }
+    return sumOfNumbers;
+}
+function arrayPlusArray(firstArrayToAdd, secondArrayToAdd) {
+    return firstArrayToAdd + secondArrayToAdd;
+}
+const firstArraySum = getArraySum(firstArrayOfNumbersToAdd);
+const secondArraySum = getArraySum(secondArrayOfNumbersToAdd);
+console.log(arrayPlusArray(firstArraySum, secondArraySum));
