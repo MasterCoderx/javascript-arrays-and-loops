@@ -222,3 +222,15 @@ function getInverseNumbers(numbersToInvert) {
     return invertedNumbers;
 }
 console.log(getInverseNumbers(arrayOfNumbersToInvert));
+
+// Exercise 14
+
+const arrayOfNumbersToAdd = [-1, 4.5, 3.2, -0.5];
+function getSumOfNumbersInArray (numbersToAdd) {
+    let sumOfNumbers = 0;
+    for (let i = 0; i < numbersToAdd.length; ++i) {
+        sumOfNumbers = sumOfNumbers + numbersToAdd[i];
+    }
+    return sumOfNumbers;
+}
+console.log(getSumOfNumbersInArray(arrayOfNumbersToAdd));
