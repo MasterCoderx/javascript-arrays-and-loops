@@ -186,3 +186,15 @@ function getReversedOrder(numbers) {
     return numbersArray.reverse();
 }
 console.log(getReversedOrder(randomNumbers));
+
+// Exercise 11
+const junkArray = ['hay', 'needle', 'hay', 'hay', 'moreJunk', 'Junk', 'Junk'];
+function findNeedle(junkToReview) {
+    for (let i = 0; i < junkToReview.length; ++i) {
+        if (junkToReview[i] === 'needle') {
+            return `found the needle at position ${junkToReview.indexOf('needle')}`
+        }
+    }
+    return 'Cannot find the needle';
+}
+console.log(findNeedle(junkArray));
