@@ -253,3 +253,15 @@ function arrayPlusArray(firstArrayToAdd, secondArrayToAdd) {
 const firstArraySum = getArraySum(firstArrayOfNumbersToAdd);
 const secondArraySum = getArraySum(secondArrayOfNumbersToAdd);
 console.log(arrayPlusArray(firstArraySum, secondArraySum));
+
+// Exercise 16
+
+const numberOfSheepToCount = [8];
+function murmurNumberOfSheep(numberOfSheep) {
+    const murmur = []
+    for (let i = 0; i < numberOfSheep; ++i) {
+        murmur.push(`${i + 1} sheep...`);
+    }
+    return murmur.join('');
+}
+console.log(murmurNumberOfSheep(numberOfSheepToCount));
