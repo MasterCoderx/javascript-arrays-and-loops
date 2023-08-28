@@ -258,10 +258,24 @@ console.log(arrayPlusArray(firstArraySum, secondArraySum));
 
 const numberOfSheepToCount = [8];
 function murmurNumberOfSheep(numberOfSheep) {
-    const murmur = []
-    for (let i = 0; i < numberOfSheep; ++i) {
-        murmur.push(`${i + 1} sheep...`);
+    const murmur = [];
+    for (let i = 1; i < numberOfSheep; ++i) {
+        murmur.push(`${i} sheep...`);
     }
     return murmur.join('');
 }
 console.log(murmurNumberOfSheep(numberOfSheepToCount));
+
+// Exercise 17
+
+gradesArray = [3, 4.3, 6, 5, 3];
+function getGradesAverage(grades) {
+    let gradesSum = 0;
+    for (let i = 0; i < grades.length; ++i) {
+        gradesSum = gradesSum + grades[i];
+    }
+    const gradesAverage = (gradesSum / grades.length);
+    return Math.floor(gradesAverage);
+}
+
+console.log(getGradesAverage(gradesArray));
