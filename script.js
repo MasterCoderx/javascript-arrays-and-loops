@@ -192,9 +192,21 @@ const junkArray = ['hay', 'needle', 'hay', 'hay', 'moreJunk', 'Junk', 'Junk'];
 function findNeedle(junkToReview) {
     for (let i = 0; i < junkToReview.length; ++i) {
         if (junkToReview[i] === 'needle') {
-            return `found the needle at position ${junkToReview.indexOf('needle')}`
+            return `found the needle at position ${junkToReview.indexOf('needle')}`;
         }
     }
     return 'Cannot find the needle';
 }
 console.log(findNeedle(junkArray));
+
+// Exercise 12
+
+const arrayOfNumbers = [1, 4, 6, 8];
+function getDoubleNumbers(numbersToDouble) {
+    const doubledNumbers = [];
+    for (let i = 0; i < numbersToDouble.length; ++i) {
+         doubledNumbers.push(2 * numbersToDouble[i]);
+    }
+    return doubledNumbers;
+}
+console.log(getDoubleNumbers(arrayOfNumbers));
