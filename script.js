@@ -275,7 +275,7 @@ function getGradesAverage(grades) {
     for (let i = 0; i < grades.length; ++i) {
         gradesSum = gradesSum + grades[i];
     }
-    const gradesAverage = (gradesSum / grades.length);
+    const gradesAverage = gradesSum / grades.length;
     return Math.floor(gradesAverage);
 }
 
