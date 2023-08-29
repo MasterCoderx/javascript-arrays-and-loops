@@ -190,10 +190,10 @@ console.log(getReversedOrder(randomNumbers));
 
 // Exercise 11
 const junkArray = ['hay', 'needle', 'hay', 'hay', 'moreJunk', 'Junk', 'Junk'];
-function findNeedle(junkToReview) {
-    for (let i = 0; i < junkToReview.length; ++i) {
-        if (junkToReview[i] === 'needle') {
-            return `found the needle at position ${junkToReview.indexOf('needle')}`;
+function findNeedle(arrayWithANeedleToFind) {
+    for (let i = 0; i < arrayWithANeedleToFind.length; ++i) {
+        if (arrayWithANeedleToFind[i] === 'needle') {
+            return `found the needle at position ${arrayWithANeedleToFind.indexOf('needle')}`;
         }
     }
     return 'Cannot find the needle';
@@ -218,7 +218,7 @@ const arrayOfNumbersToInvert = [1, -4, 6, -8];
 function getInverseNumbers(numbersToInvert) {
     const invertedNumbers = [];
     for (let i = 0; i < numbersToInvert.length; ++i) {
-        invertedNumbers.push(-numbersToInvert[i]);
+        invertedNumbers.push(numbersToInvert[i] * -1);
     }
     return invertedNumbers;
 }
@@ -227,7 +227,7 @@ console.log(getInverseNumbers(arrayOfNumbersToInvert));
 // Exercise 14
 
 const arrayOfNumbersToAdd = [-1, 4.5, 3.2, -0.5];
-function getSumOfNumbersInArray (numbersToAdd) {
+function getSumOfNumbersInArray(numbersToAdd) {
     let sumOfNumbers = 0;
     for (let i = 0; i < numbersToAdd.length; ++i) {
         sumOfNumbers = sumOfNumbers + numbersToAdd[i];
@@ -248,12 +248,12 @@ function getArraySum(numbersToAdd) {
     }
     return sumOfNumbers;
 }
-function arrayPlusArray(firstArrayToAdd, secondArrayToAdd) {
+function arrayPlusArray(firstArraySum, secondArraySum) {
+    const firstArrayToAdd = getArraySum(firstArraySum);
+    const secondArrayToAdd = getArraySum(secondArraySum);
     return firstArrayToAdd + secondArrayToAdd;
 }
-const firstArraySum = getArraySum(firstArrayOfNumbersToAdd);
-const secondArraySum = getArraySum(secondArrayOfNumbersToAdd);
-console.log(arrayPlusArray(firstArraySum, secondArraySum));
+console.log(arrayPlusArray(firstArrayOfNumbersToAdd, secondArrayOfNumbersToAdd));
 
 // Exercise 16
 
