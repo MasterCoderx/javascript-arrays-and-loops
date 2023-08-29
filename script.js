@@ -283,11 +283,11 @@ console.log(getGradesAverage(gradesArray));
 
 // Exercise 18
 
-const numberOfMonkeys = [8];
+const numberOfMonkeys = 10;
 function countMonkeys(numberToPopulate) {
     let countingMonkeys = [];
-    for (let i = 0; i < numberToPopulate; ++i) {
-        countingMonkeys.push([i+1]);
+    for (let i = 1; i <= numberToPopulate; ++i) {
+        countingMonkeys.push(i);
     }
     return countingMonkeys;
 }
