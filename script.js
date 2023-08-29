@@ -179,11 +179,12 @@ const randomNumbers = 35231;
 function getReversedOrder(numbers) {
     const numbersToString = `${numbers}`;
     const numbersArray = numbersToString.split('');
-    // const reversedNumbersArray = numbersArray.reverse()
-    // // for (let i = 0; i < numbersArray.length; ++i) {
-    // //     reversedNumbersArray.unshift(numbersArray[i]);
-    // // }
-    return numbersArray.reverse();
+    const reversedNumbersAsStringArray = numbersArray.reverse();
+    let reversedNumbersArray = [];
+    for (let i = 0; i < reversedNumbersAsStringArray.length; ++i) {
+        reversedNumbersArray.push(parseInt(reversedNumbersAsStringArray[i]));
+    }
+    return reversedNumbersArray;
 }
 console.log(getReversedOrder(randomNumbers));
 
