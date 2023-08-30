@@ -177,7 +177,7 @@ console.log(countNumberOfSheep(listOfSheep));
 const randomNumbers = 35231;
 
 function getReversedOrder(numbers) {
-    const numbersToString = `${numbers}`;
+    const numbersToString = String(numbers);
     const numbersArray = numbersToString.split('');
     const reversedNumbersAsStringArray = numbersArray.reverse();
     let reversedNumbersArray = [];
